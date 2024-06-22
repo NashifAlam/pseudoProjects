@@ -1,2 +1,2 @@
 # pseudoProjects
-Culmanation of small useless projects 
+Culmination of small useless projects 
