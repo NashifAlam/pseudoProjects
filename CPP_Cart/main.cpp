@@ -27,7 +27,7 @@ int main()
 			case 'B': user.checkBill(); 	break;
 			
 			case 'C': 	if(checkout(user)) 
-							std::cout << "\n\nCheckout Complete"<< "\nExiting";
+							std::cout << "Checkout Complete"<< "\nExiting";
 				  		else
 							break;
 
