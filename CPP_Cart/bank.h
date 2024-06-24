@@ -20,9 +20,10 @@ class Bank
 	}userInstance;
 
     bool vendorTransaction(float &);
+	bool fetchDetails(uint32_t,const std::string&);
 	std::string hash(const std::string&);
 
 public:
 	Bank();
 	friend bool checkout(Cart&);
-};
+}; 

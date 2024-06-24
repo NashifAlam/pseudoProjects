@@ -5,7 +5,7 @@
 void stall()
 {
 	__fpurge(stdin);
-	std::cout << "\n\nPress enter to continue\n";
+	std::cout << "\nPress enter to continue\n";
 	getchar();
 	return;
 }
@@ -43,7 +43,7 @@ bool checkout(Cart &cart)
 	{
 		stall();
 		system("clear");
-		std::cout<<"Redirecting to Merchant Site.";	
+		std::cout<<"Redirecting to Merchant Site.\n";	
 		sleep(1);	
 		system("clear");
 		return true;
@@ -52,3 +52,4 @@ bool checkout(Cart &cart)
 }
 
 
+ 

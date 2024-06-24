@@ -10,7 +10,6 @@ void Cart::shippingCharges()
 		totalCharges += (temp.productCost * temp.quantity);
 }
 
-
 void Cart::checkBill()
 {
 	system( "clear" );
@@ -31,7 +30,6 @@ void Cart::checkBill()
 
 	std::cout<<"\nTotal Price is : "
 		<< totalCharges
-		<< std::endl
 		<< std::endl;
 	
 	stall();	
@@ -48,19 +46,14 @@ void Cart::addtoCart()
 	while(!(std::cin >> temp.productName))
 	{
 		std::cin.clear(); std::cin.ignore(10,'\n'); 
-		std::cout<<"Invalid input\nTry Again\nEnter the item ID    : ";
+		std::cout<<"Invalid input\nTry Again\nEnter the item name    : ";
 	}
-	/*std::cout<< "Enter the item ID    : "; 
-	while(!(std::cin >> temp.productID))
-	{
-		std::cin.clear(); std::cin.ignore(10,'\n'); 
-		std::cout<<"Invalid input\nTry Again\nEnter the item ID    : ";
-	}*/
+	
 	std::cout<< "Enter the item price : "; 
 	while(!(std::cin >> temp.productCost))
 	{
 		std::cin.clear(); std::cin.ignore(10,'\n'); 
-		std::cout<<"Invalid Cost\nTry Again\nEnter the item cost  : ";
+		std::cout<<"Invalid Cost\nTry Again\nEnter the item price  : ";
 	}
 	
 	std::cout<< "Enter the quantity   : "; 
@@ -100,7 +93,7 @@ bool Cart::removeFromCart()
 	std::cin>> inputID;
 
 	item.remove_if([&inputID](const product& temp){return inputID == temp.productID;});
-	//TODO: If the item not found then 
+
 	if(item.size() == size)
 	{
 		std::cout << "\nItem not found\n";
