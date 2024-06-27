@@ -5,6 +5,7 @@
 int main()
 {
 	Cart user;
+	Bank ;
 	char choice;
 
 	while(choice != 'E')
