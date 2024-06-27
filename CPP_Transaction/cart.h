@@ -5,7 +5,7 @@ class Cart
 
 private:
 	//struct Product;
-	typedef struct Product
+	typedef struct
 	{
 		std::string productName;
 		uint32_t productID;
@@ -14,7 +14,7 @@ private:
 
 	} product;
 	
-	std::list <Product> item;
+	std::list <product> item;
 	float totalCharges;
 	int BankAccountID;
 	int searchItem(std::string);
