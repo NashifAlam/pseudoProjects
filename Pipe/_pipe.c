@@ -45,7 +45,7 @@ int main()
 		}	
 		if(childforkReturn)
 		{
-		printf("In grep main\n");
+			printf("In grep main\n");
 			close(filedesm[1]);
 			dup2(filedesm[0],0);
 			close(filedess[0]);
@@ -54,11 +54,10 @@ int main()
 		}
 		if(!childforkReturn)
 		{
-		printf("In ps main\n");
-close(filedesm[0]);
-		dup2(filedesm[1], 1);
-		execlp("ps", "ps", "-e", "-l", NULL);
-
+			printf("In ps main\n");
+			close(filedesm[0]);
+			dup2(filedesm[1], 1);
+			execlp("ps", "ps", "-e", "-l", NULL);
 		}
 	}
 
